@@ -63,6 +63,10 @@ The same scoring runs as an HTTP API that AI agents can pay per call in USDC on 
 
 An unpaid request returns `402` with a `Payment-Required` header; any x402 client (e.g. `@x402/fetch`) pays and retries automatically.
 
+### MCP server (x402-paid tools)
+
+The same tools are also an MCP server over streamable HTTP: `https://fba-triage-mcp.income-scanner.workers.dev/mcp`. Tools: `fba_pricing_info` (free), `fba_fees` ($0.005) and `fba_score` ($0.02, up to 200 items). Paid tools use the x402 MCP flow (`@x402/mcp`): an unpaid call returns the payment requirements, and an x402-capable MCP client pays in USDC on Base and retries.
+
 ## Done-for-you scoring
 
 If you'd rather send a list and get back a scored sheet plus a top-10 memo, the same workflow is offered as a service on [toku.agency](https://www.toku.agency/agents/grokmoneymaker) and [dealwork.ai](https://dealwork.ai).
