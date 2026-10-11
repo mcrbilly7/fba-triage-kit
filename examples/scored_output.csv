@@ -1,0 +1,5 @@
+asin,title,sale_price,unit_cost,weight_lb,length_in,width_in,height_in,category,inbound_per_unit,prep_per_unit,monthly_sales_est,competitors,size_tier,referral_fee,fba_fee,storage_est,total_fees,net_profit,roi_pct,margin_pct,breakeven_price,verdict,reasons
+B0EXAMPLE1,Silicone Baking Mat 2-pack,19.99,4.10,0.6,16.5,3,3,kitchen,0.40,0.10,300,8,large_standard,3.00,5.19,0.13,8.82,7.07,172.4,35.4,11.68,BUY,
+B0EXAMPLE2,Phone Stand Aluminum,14.99,6.50,0.4,6,4,1.5,electronics,0.30,0.00,500,25,large_standard,1.20,3.90,0.03,5.43,3.06,47.1,20.4,11.67,MAYBE,25 competing sellers
+B0EXAMPLE3,Yoga Mat 6mm,29.99,9.00,3.2,26,6,6,sports,1.20,0.20,150,12,large_bulky,4.50,11.79,0.84,18.53,2.46,27.3,8.2,27.10,PASS,ROI 27% < 30.0%; profit $2.46 < $3.0; large_bulky fees/storage risk
+B0EXAMPLE4,Kids Puzzle 100pc,12.99,7.80,0.9,10,8,2,toys,0.35,0.00,80,5,large_standard,1.95,5.19,0.14,7.63,-2.44,-31.3,-18.8,15.86,PASS,ROI -31% < 30.0%; profit $-2.44 < $3.0
