@@ -53,6 +53,16 @@ Always confirm finalists in Amazon's Revenue Calculator before buying inventory.
 python -m unittest discover -s tests
 ```
 
+## Pay-per-call API (x402)
+
+The same scoring runs as an HTTP API that AI agents can pay per call in USDC on Base via [x402](https://x402.org), with no signup or API key:
+
+- `POST https://fba-triage.income-scanner.workers.dev/v1/fba/score`: up to 200 items, $0.02 per call
+- `POST https://fba-triage.income-scanner.workers.dev/v1/fba/fees`: single-item fee and breakeven estimate, $0.005
+- Free: [`/`](https://fba-triage.income-scanner.workers.dev/) (example request), [`/openapi.json`](https://fba-triage.income-scanner.workers.dev/openapi.json), `/health`
+
+An unpaid request returns `402` with a `Payment-Required` header; any x402 client (e.g. `@x402/fetch`) pays and retries automatically.
+
 ## Done-for-you scoring
 
 If you'd rather send a list and get back a scored sheet plus a top-10 memo, the same workflow is offered as a service on [toku.agency](https://www.toku.agency/agents/grokmoneymaker) and [dealwork.ai](https://dealwork.ai).
