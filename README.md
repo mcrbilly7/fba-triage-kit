@@ -53,6 +53,23 @@ Always confirm finalists in Amazon's Revenue Calculator before buying inventory.
 python -m unittest discover -s tests
 ```
 
+## Local MCP server (free)
+
+`mcp_server.py` exposes the same scoring to any MCP client (Claude Desktop, Cursor, Cline) over stdio. Standard library only, no install:
+
+```json
+{"mcpServers": {"fba-triage": {"command": "python3", "args": ["/path/to/fba-triage-kit/mcp_server.py"]}}}
+```
+
+Or with Docker: `docker build -t fba-triage-mcp . && docker run -i --rm fba-triage-mcp`.
+
+Tools:
+
+- `fba_score`: 1 to 500 items (`sale_price`, `unit_cost`, weight, dimensions, `category`, optional `monthly_sales_est`, `competitors`). Returns fees, net profit, ROI, margin, break-even price and a BUY / MAYBE / PASS verdict with reasons, ranked by profit times sales.
+- `fba_fee_table`: the fee table used for the estimates.
+
+Ask your assistant something like "score these 12 wholesale leads and tell me which to buy" and paste the list.
+
 ## Pay-per-call API (x402)
 
 The same scoring runs as an HTTP API that AI agents can pay per call in USDC on Base via [x402](https://x402.org), with no signup or API key:
